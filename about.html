@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Takip Mata</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Anton' rel='stylesheet'>
+
+	<link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet'>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="icon" type="image" href="images/favicon.png">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="style2.css">
+</head>
+<style>
+	body {
+  margin: 0;
+  background-color: #eee6d8;
+  user-select: none;
+  font-family: sans-serif;
+}
+
+
+#slider {
+  position: relative;
+  width: 50%;
+  height: 30vw;
+  margin: 80px auto;
+  font-family: 'Helvetica Neue', sans-serif;
+  perspective: 1400px;
+  transform-style: preserve-3d;
+}
+
+input[type=radio] {
+  position: relative;
+  top: 108%;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  margin: 0 15px 0 0;
+  opacity: 0.4;
+  transform: translateX(-83px);
+  cursor: pointer;
+}
+
+
+input[type=radio]:nth-child(5) {
+  margin-right: 0px;
+}
+
+input[type=radio]:checked {
+  opacity: 1;
+}
+
+
+#slider{
+	height: 35vw;
+	position:relative;
+	perspective: 1000px;
+	transform-style: preserve-3d;
+}
+
+#slider label {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 400ms ease;
+}
+
+
+/* Slider Functionality */
+
+/* Active Slide */
+#s1:checked ~ #slide1, #s2:checked ~ #slide2, #s3:checked ~ #slide3{
+  box-shadow: 0 13px 26px rgba(0,0,0, 0.3), 0 12px 6px rgba(0,0,0, 0.2);
+  transform: translate3d(0%, 0, 0px);
+}
+
+/* Next Slide */
+#s1:checked ~ #slide2, #s2:checked ~ #slide3, #s3:checked ~ #slide4, #s4:checked ~ #slide5, #s5:checked ~ #slide1 {
+  box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
+  transform: translate3d(15%, 0, -100px);
+}
+
+
+/* Next to Next Slide */
+#s1:checked ~ #slide3, #s2:checked ~ #slide4, #s3:checked ~ #slide5, #s4:checked ~ #slide1, #s5:checked ~ #slide2 {
+  box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
+  transform: translate3d(30%, 0, -250px);
+}
+
+/* Previous to Previous Slide */
+#s1:checked ~ #slide4, #s2:checked ~ #slide5, #s3:checked ~ #slide1, #s4:checked ~ #slide2, #s5:checked ~ #slide3 {
+  box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
+  transform: translate3d(-30%, 0, -250px);
+}
+
+/* Previous Slide */
+#s1:checked ~ #slide5, #s2:checked ~ #slide1, #s3:checked ~ #slide2, #s4:checked ~ #slide3, #s5:checked ~ #slide4 {
+  box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
+  transform: translate3d(-15%, 0, -100px);
+}
+
+</style>
+
+<body>
+	<div class="header-img"><img class="header-logo" src="home/images/logoheader1.png"></div>
+	<div class="navbar p-0">
+		<a class="navbar-item " href="index.html"><span>HOME</span></a>
+		<a class="navbar-item activepage m-0" href="about.html"><span>ABOUT</span></a>
+		<a class="navbar-item" href="calltoaction.html"><span>CALL TO ACTION</span></a>
+		<a class="navbar-item" href="contact.html"><span>CONTACT</span></a>
+		<a class="navbar-item" href="learnmore.html"><span>LEARN MORE</span></a>
+	</div>
+	
+	<!-- box -->
+	<div class="container-fluid p-0 mb-5 thumbnail">
+		<p id="box-text1">ABOUT US</p>
+		<img class="img-fluid w-100 h-100 box" src="Home/images/header.png" alt="">
+	</div>
+	<!-- end box -->
+
+	<!-- 1st text -->
+	<div class = "container-fluid px-0 mt-5 about-container">
+		<div class="flex2-container">
+			<div class="home-text1 pt-4"><p class = "text-title color1">TAKIP-MATA</p></div>
+			<div class="home-text2 "><p class = "text-content">The term “Takip” refers to the usual statement people tell sexual harassment victims. Phrases like, 
+				“Magtakip ka kasi para hindi ka mabastos” normalized the victim-blaming culture.</p></div>
+			<div class="home-text3 pt-3 "><p class = "text-content">On the other hand, the term “Mata” refers to the eye that perceives the woman, 
+				be it society or the harassers themselves.</p></div>
+	</div>
+<!-- end of 1st text -->
+<!-- 2nd text -->
+<div class = "container-fluid px-0 pt-4 about2-container">
+	<div class="flex3-container">
+		<div class="home-text1 pt-4 "><p class = "text-title color2">WHO WE ARE</p></div>
+		<div class="home-text2"><p class = "text-content">Takip-Mata is a website advocacy campaign initiated by a student of De La Salle - College of Saint Benilde.</p></div>
+		<div class="home-text3 pt-3"><p class = "text-content">With the goal to tackle the underlying stigmas concerning women’s clothing and the misconceptions surrounding sexual harassment.</p></div>
+</div>
+</div>
+</div>
+<!-- end of 2nd text -->
+	<div class = "slider2">
+	<div class = "parent">
+		<div class = "a"></div>
+		<div class = "b">PARENT</div>
+		<div class = "c">ORGANIZATIONS</div>
+		<div class = "d"></div>
+	</div>
+
+
+<section id="slider">
+	<input type="radio" name="slider" id="s1" >
+	<input type="radio" name="slider" id="s2" checked>
+	<input type="radio" name="slider" id="s3">
+  
+	<label for="s1" id="slide1">
+		<img src="about/images/footer1.jpg" height="100%" width="100%" alt="">
+	</label>
+	<label for="s2" id="slide2">
+		<img src="about/images/footer2.jpg" height="100%" width="100%" alt="">
+	</label>
+	<label for="s3" id="slide3">
+		<img src="about/images/footer3.jpg" height="100%" width="100%" alt="">
+	</label>
+  </section>
+
+<div class="container-fluid">
+	<div class="sparkle">
+		<div class="picture-1">
+			<img src="About/images/footer2.jpg" alt="">
+		</div>
+		<div class="texture-1 pt-4 ">
+			<div class = texture-2>SPARK!</div>
+			<div class = texture-3>SPARK! Or Samahan ng mga Pilipina para sa Reporma at Kaunlaran is an SEC-registered NGO composed of advocates for the empowerment of women founded by women champions committed to the nation-wide development and inclusivity of women, LGBTQ+ and other marginalized sectors. </div>
+		</div>
+	</div>
+</div>
+</div>
+
+<!-- Site footer -->
+<footer class="site-footer mt-5">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3 col-md-4">
+				<img class="footer-logo" src="home/images/logofooter.png">
+				<h6>IN RELATIONSHIP WITH:</h6>
+			</div>
+
+			<div class="col-lg-2 col-md-2 my-4 pt-3">
+				<div class="card rounded-0">
+					<img src="Home/images/footer1.jpg" class="img-fluid rounded-0" />
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-2 my-4 pt-3">
+				<div class="card rounded-0">
+					<img src="Home/images/footer2.jpg" class="img-fluid rounded-0" />
+				</div>
+			</div>
+			<div class="col-lg-2 col-md-2 my-4 pt-3">
+				<div class="card rounded-0">
+					<img src="Home/images/footer3.jpg" class=" rounded-0" />
+				</div>
+			</div>
+
+
+			<div class="col-xs-3 col-md-2 pt-3">
+				<ul class="footer-links">
+					<li class="pt-1"><a href="index.html">HOME</a></li>
+						<li class="pt-1"><a href="about.html">ABOUT</a></li>
+						<li class="pt-1"><a href="calltoaction.html">SUPPORT</a></li>
+						<li class="pt-1"><a href="contact.html">CONTACT</a></li>
+						<li class="pt-1"><a href="learnmore.html">LEARN MORE</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+</body>
+</html>
